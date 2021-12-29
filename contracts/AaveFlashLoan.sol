@@ -2,22 +2,24 @@
 
 pragma solidity ^0.8.0;
 
-import "contracts/lib/FlashLoanReceiverBase.sol";
-import "contracts/lib/IERC20.sol";
+import "./lib/FlashLoanReceiverBase.sol";
+import "./lib/IERC20.sol";
 
-contract AaveLoan is FlashLoanReceiverBase {
+contract AaveFlashLoan is FlashLoanReceiverBase {
+    event Log(string message, uint val);
+
     constructor(ILendingPoolAddressesProvider _addressProvider)
         public
-        FlashloanReceiverBase(_addressProvider)
+        FlashLoanReceiverBase(_addressProvider)
     {}
 
     function flashLoan(address asset, uint256 amount) external {
-        uint256 balance = IERC20(asset).balanceOf(address(this));
+        uint256 bal = IERC20(asset).balanceOf(address(this));
         require(bal > amount, "bal <= amount");
         // define the recevier of the flashloan
         address receiver = address(this);
         // define the assets we are aiming to borrow, in this case one
-        address[0] memory assets = new address[](1);
+        address[] memory assets = new address[](1);
         assets[0] = asset;
         // define the amounts we would like to borrow
         uint256[] memory amounts = new uint256[](1);

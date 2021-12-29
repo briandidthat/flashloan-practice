@@ -1,0 +1,25 @@
+{
+  "name": "flashloan-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chainreaction6/flashloan-practice.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chainreaction6/flashloan-practice/issues"
+  },
+  "homepage": "https://github.com/chainreaction6/flashloan-practice#readme",
+  "dependencies": {
+    "bn.js": "^5.2.0"
+  }
+}
