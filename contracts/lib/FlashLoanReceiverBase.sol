@@ -7,7 +7,7 @@ import "./ILendingPoolAddressesProvider.sol";
 import "./ILendingPool.sol";
 
 
-abstract contract FlashloanReceiverBase is IFlashLoanReceiver {
+abstract contract FlashLoanReceiverBase is IFlashLoanReceiver {
     ILendingPoolAddressesProvider public immutable ADDRESSES_PROVIDER;
     ILendingPool public immutable LENDING_POOL;
 
