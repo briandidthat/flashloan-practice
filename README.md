@@ -1,2 +1,2 @@
 # flashloan-practice
-### just messing around with flashloans to understand them better
+### just messing around with flashloans for research purposes
